@@ -2,6 +2,7 @@
 
 from mtai.base import MTAIBase
 from mtai.tags import Tag
+from mtai.prompts import Prompt
 
 
 class MT(MTAIBase):
@@ -12,3 +13,4 @@ class MT(MTAIBase):
         MTAIBase.__init__(self, *args, **kwargs)
 
         self.tags = Tag
+        self.prompts = Prompt
