@@ -14,6 +14,7 @@ print(mt.prompts.delete_prompt_by_id("66530b1fb28d0dec9cfdc2bd"))
 
 # Static Use
 from mtai.prompts import Prompt
+
 print(Prompt.list())
 print(Prompt.ask_question(prompt="What is the capital of India?"))
 print(Prompt.get_prompt_by_id("66530b1fb28d0dec9cfdc2bd"))
