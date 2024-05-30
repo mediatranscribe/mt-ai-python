@@ -41,7 +41,7 @@ class Tag(MTAIBase):
         )
 
     @classmethod
-    def get_tab_by_id(cls, tag_id):
+    def get_tag_by_id(cls, tag_id):
         """
         Get a tag by id.
         Args:
