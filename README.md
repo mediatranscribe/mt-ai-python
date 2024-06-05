@@ -37,3 +37,22 @@ print(Tag.get_tab_by_id("664e033837511b57fa93dd2e"))
 print(Tag.delete_tag_by_id("664e033837511b57fa93dd2e"))
 ```
 
+## How To Setup
+```sh
+# Fork the repository -- 
+
+# checkout to your branch
+git checkout -b feat/bios
+
+# Setup virtual environment
+python3 -m venv venv 
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install requirements.txt
+pip install -r requirements.txt
+
+# Push changes upstream
+git push origin feat/bios
+```
