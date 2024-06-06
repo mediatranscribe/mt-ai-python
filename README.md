@@ -55,3 +55,6 @@ Description
 ```
 
 Please reference the **[docs](https://github.com/mediatranscribe/mt-ai-python/tree/main/docs)** folder for usage.
+
+### Contribution
+If you want to join, kindly see this **[contribution](https://github.com/mediatranscribe/mt-ai-python/tree/main/contribution.md)**
