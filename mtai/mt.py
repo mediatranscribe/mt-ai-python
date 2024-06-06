@@ -5,6 +5,7 @@ from mtai.tags import Tag
 from mtai.prompts import Prompt
 from mtai.transcribes import Transcribe
 
+
 class MT(MTAIBase):
     """MT Class used across defined."""
 

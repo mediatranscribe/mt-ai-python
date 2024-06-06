@@ -1,12 +1,14 @@
 from mtai.base import MTAIBase
 
+
 class Transcribe(MTAIBase):
     """
     Transcribe Class used for various transcription-related operations.
     """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
+
     @classmethod
     def list(cls):
         """
@@ -44,7 +46,7 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-audio-url",
-            data={"audio_url": audio_url, "services": services}
+            data={"audio_url": audio_url, "services": services},
         )
 
     @classmethod
@@ -61,7 +63,7 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-media-file",
-            data={"media_file": media_file, "services": services}
+            data={"media_file": media_file, "services": services},
         )
 
     @classmethod
@@ -78,9 +80,8 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-youtube-audio",
-            data={"youtube_url": youtube_url, "services": services}
+            data={"youtube_url": youtube_url, "services": services},
         )
-
 
     @classmethod
     def delete_transcribe_by_id(cls, transcribe_id):
