@@ -50,7 +50,6 @@ If you encounter any issues or bugs, please report them by opening an issue on t
     ```sh
     git push origin feature/your-feature-name
     ```
-Sure, here's the addition of the commit prefixes with descriptions:
 
 ### Commit Prefixes
 
