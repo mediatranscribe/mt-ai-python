@@ -3,6 +3,7 @@
 from mtai.base import MTAIBase
 from mtai.tags import Tag
 from mtai.prompts import Prompt
+from mtai.prompts import Bio
 
 
 class MT(MTAIBase):
@@ -14,3 +15,4 @@ class MT(MTAIBase):
 
         self.tags = Tag
         self.prompts = Prompt
+        self.bios = Bio
