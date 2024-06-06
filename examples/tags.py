@@ -18,5 +18,5 @@ from mtai.tags import Tag
 print(Tag.list())
 print(Tag.create_from_title(title="Python Programming Language"))
 print(Tag.create_from_title_summary("Python", "Python is a programming language"))
-print(Tag.get_tab_by_id("664e033837511b57fa93dd2e"))
+print(Tag.get_tag_by_id("664e033837511b57fa93dd2e"))
 print(Tag.delete_tag_by_id("664e033837511b57fa93dd2e"))
