@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Contribution Guidelines](#contribution-guidelines)
+    - [Reporting Issues](#reporting-issues)
+    - [Forking the Repository](#forking-the-repository)
+    - [Making Changes](#making-changes)
+    - [Commit Prefixes](#commit-prefixes)
+    - [Submitting a Pull Request](#submitting-a-pull-request)
+    - [Code Style and Testing](#code-style-and-testing)
+    - [Testing](#testing)
+    - [Documentation](#documentation)
+    - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Contribution Guidelines
 
 We welcome contributions from the community to help improve this project. Below are the guidelines for contributing:
@@ -27,12 +44,31 @@ If you encounter any issues or bugs, please report them by opening an issue on t
 2. Make your changes to the codebase.
 3. Commit your changes with a descriptive commit message:
     ```sh
-    git commit -m "Add feature: description of your feature"
+    git commit -m "feat: description of your feature"
     ```
 4. Push your changes to your forked repository:
     ```sh
     git push origin feature/your-feature-name
     ```
+Sure, here's the addition of the commit prefixes with descriptions:
+
+### Commit Prefixes
+
+When making commits, please use the following prefixes to categorize your changes:
+
+- `feat:` for new features
+- `fix:` for bug fixes
+- `hotfix:` for critical hotfixes
+- `refactor:` for code refactoring that does not add new features or fix bugs
+- `docs:` for changes to documentation
+- `style:` for formatting changes that do not affect the meaning of the code (e.g., linting)
+- `test:` for adding or updating tests
+- `chore:` for other changes that do not modify `src` or `test` files (e.g., updating build scripts)
+- `perf:` for performance improvements
+- `ci:` for changes to the CI configuration files and scripts
+- `build:` for changes that affect the build system or external dependencies
+
+These prefixes help maintain a clear and organized commit history.
 
 ### Submitting a Pull Request
 

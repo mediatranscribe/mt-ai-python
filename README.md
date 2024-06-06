@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [mt-ai-python](#mt-ai-python)
+  - [API SECRET KEY](#api-secret-key)
+  - [Installation](#installation)
+  - [Example](#example)
+    - [Instantiate mtai](#instantiate-mtai)
+    - [Static Use](#static-use)
+    - [Resources](#resources)
+    - [Contribution](#contribution)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # mt-ai-python
 Python package for [MediaTranscribe](https://ai.mediatranscribe.com/) View on [pypi.python.org](https://pypi.org/project/mtai/)
 
