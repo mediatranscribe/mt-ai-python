@@ -6,9 +6,6 @@ class Transcribe(MTAIBase):
     Transcribe Class used for various transcription-related operations.
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     @classmethod
     def list(cls):
         """
