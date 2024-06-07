@@ -42,9 +42,9 @@ class Bio(MTAIBase):
         }
         return cls().requests.post("/bios/mentor-mentee-bio-create", json=bio_data)
 
-    def bio_text_create(cls, text, output_format, max_length=300):
+    def create_bio_from_text(cls, text, output_format, max_length=300):
         """
-        Create a new bio with the text, output_format, max_length.
+        Create a new bio from the text, output_format, max_length.
 
         Args:
             text (str): The text to be used
@@ -62,7 +62,7 @@ class Bio(MTAIBase):
         return cls().requests.post("/bios/bio_text_create", json=bio_data)
 
     @classmethod
-    def bio_retrieve(
+    def retrieve_bio_by_id(
         cls,
         id,
     ):
@@ -78,7 +78,7 @@ class Bio(MTAIBase):
         return cls().requests.get(f"/bios/retrieve/{id}")
 
     @classmethod
-    def bio_delete(cls, id):
+    def delete_bio_by_id(cls, id):
         """
         Delete a bio by its ID.
 
