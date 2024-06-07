@@ -24,11 +24,11 @@ class Bio(MTAIBase):
         Create a new bio with the country, job_title, interests, is_mentor, max_length.
 
         Args:
-            country (str): The user's country
-            job_title (str): The user's job title
-            interests (str): the user's interests
-            is mentor (str): Whether the user is a mentor
-            max length (str): The maximum length
+            country (str): The user's country.
+            job_title (str): The user's job title.
+            interests (str): The user's interests.
+            is_mentor (bool): Whether the user is a mentor.
+            max_length (int): The maximum length.
 
         Returns:
             JSON: A JSON response containing the created bio.
@@ -42,14 +42,15 @@ class Bio(MTAIBase):
         }
         return cls().requests.post("/bios/mentor-mentee-bio-create", json=bio_data)
 
+    @classmethod
     def create_bio_from_text(cls, text, output_format, max_length=300):
         """
         Create a new bio from the text, output_format, max_length.
 
         Args:
-            text (str): The text to be used
-            output_format (str): The way the results should be presented
-            max_length (str): The maximum length
+            text (str): The text to be used.
+            output_format (str): The way the results should be presented.
+            max_length (int): The maximum length.
 
         Returns:
             JSON: A JSON response containing the created bio.
@@ -62,15 +63,12 @@ class Bio(MTAIBase):
         return cls().requests.post("/bios/bio_text_create", json=bio_data)
 
     @classmethod
-    def retrieve_bio_by_id(
-        cls,
-        id,
-    ):
+    def retrieve_bio_by_id(cls, id):
         """
         Retrieve a bio by its ID.
 
         Args:
-            bio_id (str): The ID of the bio to retrieve.
+            id (str): The ID of the bio to retrieve.
 
         Returns:
             JSON: A JSON response containing the bio details.
@@ -83,7 +81,7 @@ class Bio(MTAIBase):
         Delete a bio by its ID.
 
         Args:
-            bio_id (str): The ID of the bio to delete.
+            id (str): The ID of the bio to delete.
 
         Returns:
             JSON: A JSON response confirming the deletion.
