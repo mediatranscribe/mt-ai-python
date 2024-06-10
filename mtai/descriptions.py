@@ -20,10 +20,12 @@ class Description(MTAIBase):
         Args:
             title: str
         Returns:
-            JSON Response 
+            JSON Response
         """
-        return cls().requests.post("/descriptions/create-session-desc-from-title", data={"title": title})
-        
+        return cls().requests.post(
+            "/descriptions/create-session-desc-from-title", data={"title": title}
+        )
+
     @classmethod
     def create_from_title_summary(cls, title, summary):
         """
@@ -34,7 +36,10 @@ class Description(MTAIBase):
         Returns:
             JSON Response
         """
-        return cls().requests.post("/descriptions/create-session-desc-from-title-summary", data={"title": title, "summary": summary})
+        return cls().requests.post(
+            "/descriptions/create-session-desc-from-title-summary",
+            data={"title": title, "summary": summary},
+        )
 
     @classmethod
     def get_description_by_id(cls, description_id):
@@ -57,6 +62,3 @@ class Description(MTAIBase):
             JSON Response
         """
         return cls().requests.delete(f"/descriptions/delete/{description_id}")
-
-
-
