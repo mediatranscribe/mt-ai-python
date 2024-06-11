@@ -1,3 +1,5 @@
+# This Python script is demonstrating the usage of a library or API for interacting with a service
+# related to prompts and questions. Here's a breakdown of what the script is doing:
 import sys
 
 sys.path.append("../")

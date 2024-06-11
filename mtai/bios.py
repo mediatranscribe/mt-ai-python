@@ -1,5 +1,3 @@
-"""Entry point defined here."""
-
 from mtai.base import MTAIBase
 
 
@@ -60,7 +58,7 @@ class Bio(MTAIBase):
             "output_format": output_format,
             "max_length": max_length,
         }
-        return cls().requests.post("/bios/bio_text_create", json=bio_data)
+        return cls().requests.post("/bios/bio-text-create", json=bio_data)
 
     @classmethod
     def retrieve_bio_by_id(cls, id):

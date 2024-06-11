@@ -1,3 +1,5 @@
+# This Python script is importing modules from a custom package named `mtai`. Here's a breakdown of
+# what the script is doing:
 import sys
 
 # Add the parent directory to the sys.path to import mtai module

@@ -1,9 +1,11 @@
+# The `MT` class is a subclass of `MTAIBase` that initializes the `mtai` library with secret key and
+# provides access to tags, prompts, and bios functionalities.
 """Entry point defined here."""
 
 from mtai.base import MTAIBase
 from mtai.tags import Tag
 from mtai.prompts import Prompt
-from mtai.prompts import Bio
+from mtai.bios import Bio
 
 
 class MT(MTAIBase):
