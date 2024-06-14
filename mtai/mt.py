@@ -6,6 +6,7 @@ from mtai.base import MTAIBase
 from mtai.tags import Tag
 from mtai.prompts import Prompt
 from mtai.bios import Bio
+from mtai.transcribes import Transcribe
 
 
 class MT(MTAIBase):
@@ -18,3 +19,4 @@ class MT(MTAIBase):
         self.tags = Tag
         self.prompts = Prompt
         self.bios = Bio
+        self.transcribes = Transcribe
