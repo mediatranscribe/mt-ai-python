@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          pytest
+          pytest --verbose tests/
 
       - name: Automatic Tagging of Releases
         uses: rymndhng/release-on-push-action@master
