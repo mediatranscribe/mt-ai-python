@@ -60,7 +60,9 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-media-file",
-            data={"media_file": media_file, "services": services},
+            data={"services": services},
+            files={"media_file": (media_file, open(media_file, "rb"))},
+            headers={"Content-Type": "multipart/form-data"},
         )
 
     @classmethod

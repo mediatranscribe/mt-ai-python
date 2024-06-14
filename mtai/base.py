@@ -53,12 +53,17 @@ class MTAIApiRequests(object):
         data = kwargs.get("data")
         params = kwargs.get("params")
         headers = kwargs.get("headers")
+        files = kwargs.get("files")
         if headers is not None:
             headers.update(self.headers)
         else:
             headers = self.headers
         response = method(
-            self.API_BASE_URL + resource_uri, json=data, headers=headers, params=params
+            self.API_BASE_URL + resource_uri,
+            json=data,
+            headers=headers,
+            params=params,
+            files=files,
         )
         response.raise_for_status()
         return response.json()

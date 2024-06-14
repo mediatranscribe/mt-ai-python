@@ -59,7 +59,7 @@ def test_create_transcribe_from_audio_url(mock_post):
 
 
 def test_create_transcribe_from_media_file(mock_post):
-    media_file = "/path/to/media/file.mp4"
+    media_file = "setup.py"
     services = ["service1", "service2"]
     mock_post.return_value = {"status": "success", "data": {}}
     try:
