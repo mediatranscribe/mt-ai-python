@@ -1,3 +1,4 @@
+import mimetypes
 from mtai.base import MTAIBase
 
 
@@ -43,7 +44,7 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-audio-url",
-            data={"audio_url": audio_url, "services": services},
+            data={"audio_url": audio_url, "services": ",".join(services)},
         )
 
     @classmethod
@@ -58,15 +59,18 @@ class Transcribe(MTAIBase):
         Returns:
             JSON Response: A JSON response containing the result of the transcription.
         """
-        return cls().requests.post(
-            "/transcribes/transcribe-media-file",
-            data={"services": services},
-            files={"media_file": (media_file, open(media_file, "rb"))},
-            headers={"Content-Type": "multipart/form-data"},
-        )
+        mime_type, _ = mimetypes.guess_type(media_file)
+        if mime_type is None:
+            raise ValueError("Could not detect MIME type of the file")
+        data = {"services": ",".join(services)}
+        with open(media_file, "rb") as file:
+            files = {"media": (media_file, file, mime_type)}
+            return cls().requests.post(
+                "/transcribes/transcribe-media-file", data=data, files=files
+            )
 
     @classmethod
-    def create_transcribe_from_youtube_video(cls, youtube_url, services):
+    def create_transcribe_from_youtube_video(cls, youtube_url: str, services):
         """
         Create a transcription from a YouTube video.
 
@@ -79,7 +83,7 @@ class Transcribe(MTAIBase):
         """
         return cls().requests.post(
             "/transcribes/transcribe-youtube-audio",
-            data={"youtube_url": youtube_url, "services": services},
+            data={"youtube_url": youtube_url, "services": ",".join(services)},
         )
 
     @classmethod

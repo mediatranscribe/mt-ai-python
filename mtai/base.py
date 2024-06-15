@@ -58,14 +58,21 @@ class MTAIApiRequests(object):
             headers.update(self.headers)
         else:
             headers = self.headers
-        response = method(
-            self.API_BASE_URL + resource_uri,
-            json=data,
-            headers=headers,
-            params=params,
-            files=files,
-        )
-        response.raise_for_status()
+        if files:
+            response = method(
+                self.API_BASE_URL + resource_uri,
+                data=data,
+                headers=headers,
+                params=params,
+                files=files,
+            )
+        else:
+            response = method(
+                self.API_BASE_URL + resource_uri,
+                json=data,
+                headers=headers,
+                params=params,
+            )
         return response.json()
 
     def get(self, endpoint, **kwargs):
