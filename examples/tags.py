@@ -1,3 +1,5 @@
+# This code snippet is importing modules and classes to interact with a service related to managing
+# tags. Here's a breakdown of what the code is doing:
 import sys
 
 sys.path.append("../")

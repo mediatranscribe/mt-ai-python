@@ -47,6 +47,10 @@ jobs:
           use-check-manifest: false
           use-pyroma: false
 
+      - name: Run Tests
+        run: |
+          pytest --verbose tests/
+
       - name: Automatic Tagging of Releases
         uses: rymndhng/release-on-push-action@master
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
