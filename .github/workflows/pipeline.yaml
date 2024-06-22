@@ -58,7 +58,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         with:
-          bump_version_scheme: patch
+          bump_version_scheme: minor
           release_body: "The official release for mtai"
 
       - name: Check Release Output Parameters
